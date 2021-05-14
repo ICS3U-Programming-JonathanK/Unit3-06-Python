@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Created by: Jonathan Kene
-# Created on: May 11 2021
+# Created on: May 14 2021
 # This program asks the user to guess a number between 0 to 9
 # and tells the user if the guess is right or wrong
 
@@ -13,7 +13,7 @@ def main():
     correct_guess = random.randint(0, 9)
 
     # get the user's guess
-    user_guess_string = input("Enter the number between 0 and 9: ")
+    user_guess_string = int(input("Enter the number between 0 and 9: "))
     print("")
 
     # make sure if the user types anything but an integer, it's not valid
@@ -28,8 +28,12 @@ def main():
     else:
         if user_guess_string == correct_guess:
             print("You are correct!")
+            print("")
         else:
             print("You are wrong! The answer is = {}" .format(correct_guess))
+            print("")
+    finally:
+        print("Thanks for playing")
 
 
 if __name__ == "__main__":
